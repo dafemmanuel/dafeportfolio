@@ -1,0 +1,857 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #141414;
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.nf-mobile-home {
+    max-width: 480px;
+    margin: 0 auto;
+    background: #141414;
+    min-height: 100vh;
+}
+
+.nf-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem 0.5rem 1rem;
+    background: #141414;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.nf-logo {
+    height: 32px;
+}
+.nf-nav-icons {
+    display: flex;
+    gap: 1rem;
+}
+.nf-icon {
+    width: 26px;
+    height: 26px;
+    opacity: 0.85;
+}
+
+.nf-banner {
+    position: relative;
+    width: 100vw;
+    max-width: 100vw;
+    height: 38vw;
+    min-height: 260px;
+    max-height: 520px;
+    overflow: hidden;
+    border-radius: 1.2rem;
+    margin: 1.5rem 0 2rem 0;
+    box-shadow: 0 8px 32px #000a;
+    background: #222;
+}
+
+.nf-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.7);
+}
+.nf-banner-content {
+    position: absolute;
+    left: 1.2rem;
+    bottom: 1.2rem;
+    color: #fff;
+}
+
+.nf-banner-gradient {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 2;
+    background: linear-gradient(
+        to top,
+        rgba(20,20,20,0.95) 0%,
+        rgba(20,20,20,0.6) 40%,
+        rgba(20,20,20,0.2) 70%,
+        rgba(0,0,0,0) 100%
+    );
+}
+
+.nf-banner-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.3rem 0;
+    letter-spacing: 0.01em;
+}
+.nf-banner-desc {
+    font-size: 1rem;
+    margin: 0 0 0.7rem 0;
+    color: #fff;
+    text-shadow: 0 2px 8px #000a;
+}
+.nf-banner-btns {
+    display: flex;
+    gap: 0.7rem;
+}
+.nf-banner-btn {
+    border: none;
+    border-radius: 0.4rem;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: rgba(20,20,20,0.8);
+    color: #fff;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px #0004;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.nf-banner-btn.nf-play {
+    background: #fff;
+    color: #141414;
+}
+.nf-banner-btn.nf-play:hover {
+    background: #e50914;
+    color: #fff;
+}
+.nf-banner-btn.nf-info:hover {
+    background: #333;
+    color: #e50914;
+}
+
+.nf-carousel-section {
+    margin: 0 0 1.3rem 0;
+    padding-left: 0.5rem;
+}
+.nf-carousel-title {
+    font-size: 1.08rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0.2rem;
+    color: #fff;
+    letter-spacing: 0.01em;
+}
+.nf-carousel {
+    display: flex;
+    gap: 0.7rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: #e50914 #222;
+}
+.nf-carousel-item {
+    flex: 0 0 110px;
+    max-width: 110px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 12px #0008;
+    background: #222;
+    transition: transform 0.2s;
+}
+.nf-carousel-item img {
+    width: 100%;
+    aspect-ratio: 9/16;
+    object-fit: cover;
+    display: block;
+}
+.nf-carousel-item:hover {
+    transform: scale(1.06);
+    box-shadow: 0 4px 24px #e5091440;
+}
+
+.nf-footer {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #b0b8c9;
+    margin-top: 2rem;
+    padding-bottom: 1.2rem;
+}
+
+.nf-profile-section {
+    margin: 1.2rem 0.5rem 1.5rem 0.5rem;
+    background: rgba(20,20,20,0.85);
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px #0006;
+    padding: 1rem 0.7rem 1rem 0.7rem;
+}
+.nf-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.nf-profile-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e50914;
+    box-shadow: 0 2px 8px #0008;
+}
+.nf-profile-name {
+    margin: 0 0 0.2rem 0;
+    font-size: 1.2rem;
+    color: #e50914;
+    font-weight: 700;
+}
+.nf-profile-bio {
+    margin: 0;
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0.92;
+}
+.nf-profile-cards {
+    display: flex;
+    gap: 0.7rem;
+    overflow-x: auto;
+    padding-bottom: 0.3rem;
+}
+.nf-profile-card {
+    flex: 0 0 90px;
+    max-width: 90px;
+    background: #222;
+    border-radius: 0.7rem;
+    box-shadow: 0 2px 8px #0006;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.4rem 0.2rem 0.5rem 0.2rem;
+    transition: transform 0.2s;
+}
+.nf-profile-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    margin-bottom: 0.3rem;
+}
+.nf-profile-card span {
+    color: #fff;
+    font-size: 0.98rem;
+    text-align: center;
+    margin-top: 0.1rem;
+}
+.nf-profile-card:hover {
+    transform: scale(1.07);
+    box-shadow: 0 4px 16px #e5091440;
+}
+
+.nf-drawer {
+    position: fixed;
+    top: 0;
+    right: -80vw; /* Hide off-screen by default */
+    width: 80vw;
+    max-width: 320px;
+    height: 100vh;
+    background: #181818;
+    color: #fff;
+    z-index: 1001;
+    box-shadow: -4px 0 24px #000a;
+    transition: right 0.3s cubic-bezier(.4,0,.2,1);
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem 1rem;
+}
+.nf-drawer.open {
+    right: 0; /* Slide in when open */
+}
+
+.nf-drawer {
+    position: fixed;
+    top: 0; right: -80vw;
+    width: 80vw;
+    max-width: 320px;
+    height: 100vh;
+    background: #181818;
+    color: #fff;
+    z-index: 2001;
+    box-shadow: -4px 0 24px #000a;
+    transition: right 0.3s cubic-bezier(.4,0,.2,1);
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem 1rem;
+}
+.nf-drawer.open {
+    right: 0;
+}
+.nf-drawer-backdrop {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #000a;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+.nf-drawer-backdrop.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.nf-drawer-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+.nf-drawer-avatar {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e50914;
+}
+.nf-drawer-header h3 {
+    margin: 0 0 0.2rem 0;
+    font-size: 1.1rem;
+    color: #e50914;
+}
+.nf-drawer-header p {
+    margin: 0;
+    font-size: 0.98rem;
+    color: #bbb;
+}
+.nf-drawer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+.nf-drawer-links li {
+    margin-bottom: 1rem;
+}
+.nf-drawer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.05rem;
+    transition: color 0.2s;
+}
+.nf-drawer-links a:hover {
+    color: #e50914;
+}
+.nf-drawer-close {
+    background: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.6rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: auto;
+      min-width: 44px;
+    min-height: 44px;
+}
+.nf-drawer-backdrop {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #000a;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+.nf-drawer-backdrop.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    .nf-profile-section {
+        margin: 1.2rem 0.2rem 1.2rem 0.2rem;
+        padding: 0.7rem 0.3rem 0.7rem 0.3rem;
+    }
+    .nf-profile-header {
+        gap: 0.7rem;
+    }
+    .nf-profile-card {
+        min-width: 80px;
+        max-width: 80px;
+        padding: 0.3rem 0.1rem 0.4rem 0.1rem;
+    }
+}
+
+.nf-modal-backdrop {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #000a;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+.nf-modal-backdrop.show {
+    opacity: 1;
+    pointer-events: all;
+}
+.nf-modal {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    background: #181818;
+    color: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 8px 32px #000c;
+    z-index: 2001;
+    min-width: 260px;
+    max-width: 90vw;
+    width: 340px;
+    padding: 1.2rem 1rem 1.5rem 1rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nf-modal.show {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%) scale(1);
+}
+.nf-modal-content h3 {
+    margin-top: 0;
+    color: #e50914;
+    font-size: 1.2rem;
+}
+.nf-modal-content p {
+    font-size: 1.05rem;
+    color: #fff;
+    margin-bottom: 0;
+}
+.nf-modal-close {
+    margin-top: 1rem;
+    background: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nf-profile-modal,
+.nf-about-modal {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+/* Profile Modal Styles */
+
+.nf-profile-modal-backdrop {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #000a;
+    z-index: 3000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+.nf-profile-modal-backdrop.show {
+    opacity: 1;
+    pointer-events: all;
+}
+.nf-profile-modal {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    background: #181818;
+    color: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 8px 32px #000c;
+    z-index: 3001;
+    min-width: 260px;
+    max-width: 90vw;
+    width: 340px;
+    padding: 1.2rem 1rem 1.5rem 1rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nf-profile-modal.show {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%) scale(1);
+}
+.nf-profile-modal-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+.nf-profile-modal-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e50914;
+}
+.nf-profile-modal-header h2 {
+    margin: 0 0 0.2rem 0;
+    font-size: 1.2rem;
+    color: #e50914;
+}
+.nf-profile-modal-header p {
+    margin: 0;
+    font-size: 1rem;
+    color: #bbb;
+}
+.nf-profile-modal-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    width: 100%;
+}
+.nf-profile-modal-list li {
+    margin-bottom: 1.1rem;
+    text-align: left;
+}
+.nf-profile-modal-list a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.08rem;
+    transition: color 0.2s;
+}
+.nf-profile-modal-list a:hover {
+    color: #e50914;
+}
+.nf-profile-modal-close {
+    background: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.nf-banner {
+    position: relative;
+    width: 100%;
+    height: 54vw;
+    min-height: 180px;
+    max-height: 320px;
+    overflow: hidden;
+    border-radius: 0.7rem;
+    margin: 0.7rem 0.5rem 1.2rem 0.5rem;
+    box-shadow: 0 8px 32px #000a;
+    background: #222;
+}
+.nf-banner-img,
+.nf-banner-video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.7rem;
+    transition: opacity 0.3s;
+    z-index: 1;
+    opacity: 1;
+}
+.nf-banner-video {
+    background: #000;
+    display: none;
+}
+.nf-banner-content {
+    position: absolute;
+    left: 1.2rem;
+    bottom: 1.2rem;
+    color: #fff;
+    z-index: 2;
+}
+
+
+.nf-about-modal-backdrop {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #000a;
+    z-index: 4000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+.nf-about-modal-backdrop.show {
+    opacity: 1;
+    pointer-events: all;
+}
+.nf-about-modal {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    background: #181818;
+    color: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 8px 32px #000c;
+    z-index: 4001;
+    min-width: 260px;
+    max-width: 90vw;
+    width: 340px;
+    padding: 1.2rem 1rem 1.5rem 1rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.nf-about-modal.show {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%) scale(1);
+}
+.nf-about-modal-header h2 {
+    margin: 0 0 1rem 0;
+    color: #e50914;
+    font-size: 1.3rem;
+}
+.nf-about-modal-content {
+    font-size: 1.08rem;
+    color: #fff;
+    margin-bottom: 1.2rem;
+}
+.nf-about-modal-content ul {
+    margin: 0.5rem 0 0.5rem 1.2rem;
+    padding: 0;
+}
+.nf-about-modal-close {
+    background: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: center;
+}
+
+/* Netflix-style Player Modal */
+.nf-player-backdrop {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #000c;
+    z-index: 5000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+.nf-player-backdrop.show {
+    opacity: 1;
+    pointer-events: all;
+}
+.nf-player-modal {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0.97);
+    background: #181818;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px #000a;
+    z-index: 5001;
+    width: 95vw;
+    max-width: 700px;
+    max-height: 95vh;
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.nf-player-modal.show {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%) scale(1);
+}
+.nf-player-video-wrap {
+    position: relative;
+    width: 100%;
+    background: #000;
+}
+#nfPlayerVideo {
+    width: 100%;
+    height: 40vw;
+    max-height: 50vh;
+    background: #000;
+    display: block;
+    border-radius: 1rem 1rem 0 0;
+}
+.nf-player-close {
+    position: absolute;
+    top: 0.7rem;
+    right: 1.2rem;
+    background: rgba(24,24,24,0.7);
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+.nf-player-close:hover {
+    background: #e50914;
+}
+.nf-player-meta {
+    padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+    background: #181818;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.nf-player-title-row {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.nf-player-year {
+    font-size: 1rem;
+    color: #bbb;
+    font-weight: 400;
+    border: 1px solid #444;
+    border-radius: 0.5rem;
+    padding: 0.1rem 0.7rem;
+    margin-left: 0.5rem;
+}
+.nf-player-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.nf-player-action {
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.2s, color 0.2s;
+}
+.nf-player-action:hover {
+    background: #e50914;
+    color: #fff;
+}
+.nf-player-desc {
+    font-size: 1.05rem;
+    color: #eee;
+    line-height: 1.6;
+}
+
+.nf-player-video-wrap {
+    position: relative;
+    width: 100%;
+    background: #000;
+    border-radius: 1rem 1rem 0 0;
+    overflow: hidden;
+}
+#nfPlayerVideo {
+    width: 100%;
+    height: 50vw;
+    max-height: 50vh;
+    background: #000;
+    display: block;
+}
+.nf-player-bigplay {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 3rem;
+    width: 4rem; height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.95;
+    z-index: 2;
+    transition: opacity 0.2s;
+}
+.nf-player-bigplay.hide {
+    display: none;
+}
+.nf-player-controls {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to top, #181818cc 70%, transparent 100%);
+    padding: 1rem 1.2rem 0.7rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
+}
+.nf-player-progress-bg {
+    flex: 1;
+    height: 6px;
+    background: #333;
+    border-radius: 3px;
+    margin-right: 1rem;
+    position: relative;
+    cursor: pointer;
+}
+.nf-player-progress-red {
+    height: 100%;
+    background: #e50914;
+    border-radius: 3px;
+    width: 0%;
+    transition: width 0.1s;
+}
+.nf-player-playpause {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-right: 0.rem;
+}
+.nf-player-time {
+    color: #fff;
+    font-size: 0.95rem;
+    min-width: 48px;
+}
+
+@media (max-width: 600px) {
+    .nf-player-modal {
+        width: 99vw;
+        max-width: 99vw;
+    }
+    #nfPlayerVideo {
+        height: 50vw;
+        max-height: 32vh;
+    }
+    .nf-player-meta {
+        padding: 1rem 0.7rem 1rem 0.7rem;
+    }
+}
